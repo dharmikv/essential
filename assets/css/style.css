@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+    /* ===========================================================  CONTAINER-FLUID  ===========================================================*/
+
+    .container-fluid-sm{
+        @apply px-55 lgscreen:px-40
+    }
+    .container-fluid-md{
+        @apply px-80 lgscreen:px-55 
+    }
+    .container-fluid-lg{
+        @apply px-100 lgscreen:px-80
+    }
+   
+    /* ===========================================================  TITLE  ===========================================================*/
+    .title-primary h1,
+    .title-primary h2,
+    .title-primary h3,
+    .title-primary h4,
+    .title-primary h5,
+    .title-primary h6{
+        @apply font-Evaes
+    }
+
+
+    .title-secondary h1,
+    .title-secondary h2,
+    .title-secondary h3,
+    .title-secondary h4,
+    .title-secondary h5,
+    .title-secondary h6{
+        @apply font-Articulate
+    }
+    
+    .title-primary h1,
+    .title-secondary h1{
+        @apply text-84 leading-98
+    }
+
+    
+    .title-primary h2,
+    .title-secondary h2{
+        @apply text-48 leading-53
+    }
+
+    .title-primary h3,
+    .title-secondary h3{
+        @apply text-32 leading-35
+    }
+
+    .title-primary h4,
+    .title-secondary h4{
+        @apply text-24 leading-28
+    }
+    
+    .title-white{
+        @apply text-White  /* #FFFFFF  */
+    }
+    .title-charcoal{
+        @apply text-charcoal  /* #293148 */
+    }
+    .title-blue{
+        @apply text-blue  /* #47557F */
+    }
+    .title-grey{
+        @apply text-grey   /* #4E4E4E  */
+    }
+    .title-lightblue{
+        @apply text-lightblue /* #6475AD  */
+    }
+
+    /* ===========================================================  CONTENT  ===========================================================*/
+
+    .content p,
+    .content span{
+        @apply font-Articulate text-16 leading-26 tracking-04em
+    }
+    .content-white{
+        @apply text-White  /* #FFFFFF  */
+    }
+    .content-charcoal{
+        @apply text-charcoal  /* #293148 */
+    }
+    .content-blue{
+        @apply text-blue  /* #47557F */
+    }
+    .content-grey{
+        @apply text-grey   /* #4E4E4E  */
+    }
+    .content-lightblue{
+        @apply text-lightblue /* #6475AD  */
+    }
+
+    /* ===========================================================  CONTENT  ===========================================================*/
+
+    .font-light{
+        @apply font-300
+    }
+
+    .font-regular{
+        @apply font-400
+    }
+
+    .font-bold{
+        @apply font-700
+    }
+
+    .font-bolder{
+        @apply font-800
+    }
+}
+
+@layer components{
+    .btn{
+        @apply text-16 leading-26 tracking-04em font-Articulate py-10 px-28 rounded-100 flex text-center justify-center items-center font-bold
+    }
+    .btn-lightblue{
+        @apply text-White bg-lightblue border-1 border-lightblue transition-all ease-out duration-300
+    }
+    .btn-lightblue:hover{
+        @apply border-1 border-lightblue text-lightblue bg-transparent  transition-all ease-out duration-300
+    }
+    .swiper{
+        @apply w-full h-full
+    }
+}
+
+@layer utilities{
+    .innerheader{
+        @apply relative bg-innerheader-gradient
+    }
+    .innerheader::before{
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/innerheaderimg.jpg')] bg-cover bg-no-repeat bg-center h-full w-full opacity-20
+    }
+    .hero-grediant{
+        background: linear-gradient(180deg, #E0E7EF 0%, rgba(224, 231, 239, 0.869061) 2.7%, rgba(224, 231, 239, 0.730004) 5.19%, rgba(224, 231, 239, 0.50838) 8.09%, rgba(224, 231, 239, 0) 12.56%), #77BFBC;
+    }
+}
