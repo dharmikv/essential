@@ -215,6 +215,6 @@
         @apply relative
     }
     .circle::before{
-        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/herosectioncricles.png')] bg-contain bg-no-repeat bg-center w-full h-full
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/herosectioncricles.png')] bg-contain bg-no-repeat bg-center w-full h-full -z-10
     }
 }
