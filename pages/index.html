@@ -11,25 +11,25 @@
 </head>
 <body>
     <header class="fixed top-0 z-20 header w-full">
-        <div class="innerheader py-38">
+        <div class="innerheader">
             <div class="container-fluid-sm">
                 <div class="relative flex items-center justify-between">
-                   <div class="w-1/2">
+                   <div class="w-1/2 lgscreen:w-full">
                      <div class="w-full">
                         <div class="swiper inner-header-swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="content content-grey font-bold">
+                                    <div class="content content-grey font-bold lgscreen:text-center">
                                         <p>Enjoy a relaxing experience and unmatched service.</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="content content-grey font-bold">
+                                    <div class="content content-grey font-bold lgscreen:text-center">
                                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="content content-grey font-bold">
+                                    <div class="content content-grey font-bold lgscreen:text-center">
                                         <p>Enjoy a relaxing experience and unmatched service.</p>
                                     </div>
                                 </div>
@@ -37,18 +37,18 @@
                        </div>
                      </div>
                    </div>
-                   <div class="gap-20 flex">
+                   <div class="gap-20 flex header-buttons lgscreen:hidden">
                         <a href="#" class="btn btn-lightblue">Request A Consultation</a>
                         <a href="#" class="btn btn-lightblue">Gift Card</a>
                    </div>
                 </div>
             </div>
         </div>
-        <nav class="mx-28 bg-White/[0.48] rounded-10 shadow-headershadow ">
-            <div class="py-35">
+        <nav class="mx-28 smscreen:mx-20 bg-White/[0.48] rounded-10 shadow-headershadow ">
+            <div class="py-35 header-blur">
                 <div class="container-fluid-md">
-                    <div class="flex justify-between items-center pb-28 border-b-1 border-b-lightblue">
-                        <div class="content content-blue font-bolder">
+                    <div class="grid grid-cols-3 pb-28 mdscreen:pb-0 border-b-1 border-b-lightblue mdscreen:border-b-0">
+                        <div class="content content-blue font-bolder mdscreen:hidden flex items-center">
                             <a href="tel:925.855.1773">
                                 <div class="flex items-center gap-8">
                                     <img src="../assets/images/call-icon.svg" alt="">
@@ -56,22 +56,119 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="nav-logo">
+                        <div class="nav-logo flex justify-center">
                             <a href="#">
                                 <img src="../assets/images/logo.png" alt="">
                             </a>
                         </div>
+                        <div class="search-input-form mdscreen:hidden flex justify-end items-center">
+                           <form action="">
+                                <div class="relative search-input max-w-[280px]">
+                                    <input type="text" class="search-input" placeholder="Search..." name="" id="">
+                                </div>
+                           </form>
+                        </div>
                     </div>
+                    <ul class="nav-link-group mdscreen:hidden flex justify-between items-center">
+                       <li class="nav-link"><a href="#">About Us</a></li> 
+                       <li class="nav-link"><a href="#">Treatments</a></li> 
+                       <li class="nav-link"><a href="#">Conditions</a></li> 
+                       <li class="nav-link"><a href="#">Resources</a></li> 
+                       <li class="nav-link"><a href="#">Gallery</a></li> 
+                       <li class="nav-link"><a href="#">Blog</a></li> 
+                       <li class="nav-link"><a href="#">Contact</a></li> 
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero-grediant h-screen" ></section>
+        <section class="hero-section h-screen relative">
+            <div class="relative h-full">
+                <div class="swiper hero-slider h-full">
+                    <div class="swiper-wrapper h-full">
+                        <div class="swiper-slide h-full hero-grediant w-full">
+                            <div class="container-fluid-lg h-full w-full">
+                                <div class="flex w-full h-full mdscreen:flex-col items-center slider-content">
+                                    <div class="left-section w-6/12 circle relative mdscreen:w-full h-full">
+                                        demo
+                                    </div>
+                                    <div class="right-section w-6/12 mdscreen:w-full">
+                                        <div class="header-img w-full mdscreen:flex mdscreen:justify-center">
+                                            <img src="../assets/images/women-image.png" class="w-[65%] 3xlscreen:w-[73%] 2xlscreen:w-[78%] xlscreen:w-[88%] lgscreen:w-[475px]" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-full hero-grediant2 w-full">
+                            <div class="container-fluid-lg h-full w-full">
+                                <div class="flex w-full h-full mdscreen:flex-col items-center slider-content">
+                                    <div class="left-section w-6/12 circle relative mdscreen:w-full h-full">
+                                        demo
+                                    </div>
+                                    <div class="right-section w-6/12 mdscreen:w-full">
+                                        <div class="header-img w-full mdscreen:flex mdscreen:justify-center">
+                                            <img src="../assets/images/women-image.png" class="w-[65%] 3xlscreen:w-[73%] 2xlscreen:w-[78%] xlscreen:w-[88%] lgscreen:w-[475px]" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-full hero-grediant3 w-full">
+                            <div class="container-fluid-lg h-full w-full">
+                                <div class="flex w-full h-full mdscreen:flex-col items-center slider-content">
+                                    <div class="left-section w-6/12 circle relative mdscreen:w-full h-full">
+                                        demo
+                                    </div>
+                                    <div class="right-section w-6/12 mdscreen:w-full">
+                                        <div class="header-img w-full mdscreen:flex mdscreen:justify-center">
+                                            <img src="../assets/images/women-image.png" class="w-[65%] 3xlscreen:w-[73%] 2xlscreen:w-[78%] xlscreen:w-[88%] lgscreen:w-[475px]" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide h-full hero-grediant2">
+                            <div class="container-fluid-lg h-full w-full">
+                                <div class="flex w-full h-full mdscreen:flex-col items-center slider-content">
+                                    <div class="left-section w-6/12 circle relative">
+                                        <h2>ok</h2>
+                                     </div>
+                                     <div class="right-section w-6/12">
+                                         <div class="header-img w-full">
+                                             <img src="../assets/images/women-image.png" class="max-w-[75%] 2xlscreen:max-w-[78%] xlscreen:max-w-[88%] lgscreen:max-w-[100%]" alt="">
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-full hero-grediant3">
+                            <div class="container-fluid-lg h-full w-full">
+                                <div class="flex w-full h-full mdscreen:flex-col items-center slider-content">
+                                    <div class="left-section w-6/12 circle relative">
+                                        <h2>ok</h2>
+                                     </div>
+                                     <div class="right-section w-6/12">
+                                         <div class="header-img w-full">
+                                             <img src="../assets/images/women-image.png" class="max-w-[75%] 2xlscreen:max-w-[78%] xlscreen:max-w-[88%] lgscreen:max-w-[100%]" alt="">
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>

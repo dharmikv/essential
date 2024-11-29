@@ -7,13 +7,13 @@
     /* ===========================================================  CONTAINER-FLUID  ===========================================================*/
 
     .container-fluid-sm{
-        @apply px-55 lgscreen:px-40
+        @apply px-55 xlscreen:px-30 lgscreen:px-20 smscreen:px-20
     }
     .container-fluid-md{
-        @apply px-80 lgscreen:px-55 
+        @apply px-80 xlscreen:px-50 lgscreen:px-40 mdscreen:px-28
     }
     .container-fluid-lg{
-        @apply px-100 lgscreen:px-80
+        @apply px-100 lgscreen:px-80 mdscreen:px-40
     }
    
     /* ===========================================================  TITLE  ===========================================================*/
@@ -38,7 +38,7 @@
     
     .title-primary h1,
     .title-secondary h1{
-        @apply text-84 leading-98
+        @apply text-84 leading-[93px]
     }
 
     
@@ -78,6 +78,7 @@
     .content p,
     .content span{
         @apply font-Articulate text-16 leading-26 tracking-04em
+            lgscreen:text-14 lgscreen:leading-[16px]
     }
     .content-white{
         @apply text-White  /* #FFFFFF  */
@@ -112,9 +113,17 @@
     .font-bolder{
         @apply font-800
     }
+
+    /* ===========================================================  SWIPER  ===========================================================*/
+
+    .swiper{
+        @apply w-full h-full
+    }
 }
 
 @layer components{
+    /* ===========================================================  BUTTON  ===========================================================*/
+
     .btn{
         @apply text-16 leading-26 tracking-04em font-Articulate py-10 px-28 rounded-100 flex text-center justify-center items-center font-bold
     }
@@ -124,19 +133,88 @@
     .btn-lightblue:hover{
         @apply border-1 border-lightblue text-lightblue bg-transparent  transition-all ease-out duration-300
     }
-    .swiper{
-        @apply w-full h-full
+
+
+    .nav-link-group{
+        @apply pt-28
+    }
+    .nav-link{
+        @apply font-Articulate font-bold text-16 leading-26 tracking-04em text-grey transition-colors ease-out duration-300 relative
+    }
+    .nav-link:hover{
+        @apply text-charcoal transition-colors ease-out duration-300
+    }
+    
+
+    .search-input input{
+        @apply bg-White border-1 border-blue rounded-100 py-10 px-28 relative transition-all ease-out duration-300 focus-within:outline-none focus:ring-1 focus:ring-lightblue focus:transition-all focus:duration-300 focus:ease-out lgscreen:w-[200px]
+    }
+    /* .search-input::before{
+        @apply content-[""] absolute top-[30%] left-15  bg-[url('../../images/search-icon.svg')] bg-no-repeat w-full h-full z-30 pointer-events-none 
+    } */
+    .search-input input::placeholder{
+        @apply text-grey font-regular font-Articulate tracking-04em text-16 leading-26 
+    }
+
+    .hero-slider.swiper-horizontal>.swiper-pagination-bullets,
+    .hero-slider.swiper-pagination-bullets.swiper-pagination-horizontal,
+    .hero-slider.swiper-pagination-custom, .swiper-pagination-fraction{
+        @apply flex justify-center items-center gap-28
+     }
+    .hero-slider.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .hero-slider.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+        @apply !w-15 !h-15 !bg-White gap-20
     }
 }
 
 @layer utilities{
+
+    .is-sticky {
+        animation: headerStickyAnimation 0.5s ease-in-out;
+        @apply fixed top-20 left-0 w-full z-[50] transition-all duration-500 
+    }
+    @keyframes headerStickyAnimation {
+        0% {
+            opacity: 0.5;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .is-sticky .header-blur{
+        @apply backdrop-blur-[15px] rounded-10 shadow-sm
+    }
     .innerheader{
-        @apply relative bg-innerheader-gradient
+        @apply relative bg-innerheader-gradient py-38 lgscreen:py-28 mdscreen:py-20
     }
+    .innerheader .content p{
+        @apply smscreen:text-11 smscreen:leading-[16px]
+    }
+    
     .innerheader::before{
-        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/innerheaderimg.jpg')] bg-cover bg-no-repeat bg-center h-full w-full opacity-20
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/innerheaderimg.jpg')] bg-contain bg-repeat bg-center h-full w-full opacity-20
     }
+
     .hero-grediant{
         background: linear-gradient(180deg, #E0E7EF 0%, rgba(224, 231, 239, 0.869061) 2.7%, rgba(224, 231, 239, 0.730004) 5.19%, rgba(224, 231, 239, 0.50838) 8.09%, rgba(224, 231, 239, 0) 12.56%), #77BFBC;
+    }
+    .hero-grediant2 {
+        background: 
+            linear-gradient(180deg, #E0E7EF 0%, rgba(224, 231, 239, 0.869061) 2.7%, rgba(224, 231, 239, 0.730004) 5.19%, rgba(224, 231, 239, 0.50838) 8.09%, rgba(224, 231, 239, 0) 12.56%),
+            linear-gradient(0deg, rgba(201, 236, 255, 1), rgba(201, 236, 255, 1));
+    }
+    
+    .hero-grediant3 {
+        background: 
+            linear-gradient(180deg, #E0E7EF 0%, rgba(224, 231, 239, 0.869061) 2.7%, rgba(224, 231, 239, 0.730004) 5.19%, rgba(224, 231, 239, 0.50838) 8.09%, rgba(224, 231, 239, 0) 12.56%),
+            linear-gradient(0deg, rgba(193, 180, 244, 1), rgba(193, 180, 244, 1));
+    }
+    .circle{
+        @apply relative
+    }
+    .circle::before{
+        @apply content-[""] absolute top-0 left-0 bg-[url('../../images/herosectioncricles.png')] bg-contain bg-no-repeat bg-center w-full h-full
     }
 }
