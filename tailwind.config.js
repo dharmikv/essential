@@ -196,9 +196,13 @@ module.exports = {
       // gradient1 : 'linear-gradient(0deg, #77BFBC, #77BFBC), linear-gradient(180deg, #E0E7EF 0%, rgba(224, 231, 239, 0.869061) 2.7%, rgba(224, 231, 239, 0.730004) 5.19%, rgba(224, 231, 239, 0.50838) 8.09%, rgba(224, 231, 239, 0) 12.56%)'
     }),
     extend: {
+      zIndex:{
+        99:"99"
+      },
       screens:{
         xxs: { min : "320px" },
         xs: { min : "425px" },
+        576 : {min : "576px"},
         sm: { min: "640px" },
         md: { min : "768px" },
         lg: { min : "1024px" },
@@ -212,6 +216,7 @@ module.exports = {
         lgscreen: { max: "1024px" },
         mdscreen: { max: "768px" },
         smscreen: { max: "640px" },
+        576 : {max : "576px"},
         xsscreen: { max: "425px" },
         "2xsscreen":{max:"320px"},
       },
